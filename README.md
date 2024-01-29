@@ -1,9 +1,9 @@
 # Medical_preAuthBot
 This medical Bot accepts patient’s medical record (pdf). It refers the provided guidelines (curently for colonoscopy only) and makes decision for medical insurance pre-authorization for the requested Current Procedural Terminology (CPT) code(s). It uses OpenAI API to access its latest ‘gpt-4-1106-preview’ model and uses retrieval technology (RAG). This is just a proof-of-concept. Web deployment, optimisation, advanced RAG techniques, expansion for variety of medical records & medical conditions, and custom LLM model deployment will follow soon. I have followed two approaches.
 1.	General Application:- There are three files
-   ..*a.	medical_preAuthBOT.py - contains the main code that includes (prompt) instructions and guidelines, and uses OpenAI API (‘gpt-4-1106-preview’ model) to answer the questions
-  	..*b.	medical_preAuthBOT_functions.py - contains the functions used in the main notebook
-  	..*c.	requirements.txt file – lists all the required libraries to run the code
+  *a.	medical_preAuthBOT.py - contains the main code that includes (prompt) instructions and guidelines, and uses OpenAI API (‘gpt-4-1106-preview’ model) to answer the questions
+  *b.	medical_preAuthBOT_functions.py - contains the functions used in the main notebook
+  *c.	requirements.txt file – lists all the required libraries to run the code
 
 Please make sure that the required libraries are installed and both the notebooks are in the same folder. When you run the notebook (medical_preAuthBOT), you will get a pop up to upload the patient’s medical record. Then the model will use the information provided in the instructions (which also includes guidelines) and patients medical record to decide if the requested CPT codes should be approved or not. It will also provide the reason (chain-of-thoughts) on why the requested CPT should be approved. In case of any missing data, it will request for the additional information that could help in making decision. It will display the information in the requested format, and then conclude with less than 40-word 'conclusion' at the end.
 
