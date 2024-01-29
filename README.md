@@ -8,4 +8,4 @@ Please make sure that the required libraries are installed or both the notebooks
 
 2.	Dockerised application:- In this version I have dockerised the application to make it run on any environment and machine. It reduces the hassle to manually install the required libraries or create a virtual environment or have all the files in the required folder structure. It has esentially all the files & folders as in approach 1. Have the docker client running on your machine and in the command/terminal use the command ‘docker pull abhiagar/medical_preauth’ to get the latest docker image of the project. Then use the command ‘docker run abhiagar/medical_preauth’ to run the application. (Please note that as I am using os environment to pass the OpenAI API and tkinter to select the patient file on the computer, this is freezed in docker and doesn’t work. So, just for proof-of-concept, I have hard coded my OpenAI (paid) API Key and have loaded patient3 pdf in the docker image).
    
-![alt text](docker_medical_preauth.png)
+![alt text](images/docker_medical_preauth.png)
